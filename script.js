@@ -12,8 +12,8 @@ const PROFILE = {
   name: "Kondamudi Srichandan",
   designation: "Faculty, Department of Electrical & Electronics Engineering",
   institution: "GITAM (Deemed to be University), Visakhapatnam",
-  email: "your.email@gitam.edu",
-  phone: "+91-XXXXXXXXXX",
+  email: "srichandank@gmail.com",
+  phone: "+91-9866298851",
   office: "Dept. of EECE, GITAM University, Visakhapatnam",
   researchInterests: [
     "Electromagnetic Launchers", "Solar PV Systems", "Reverse Osmosis Desalination",
