@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kondamudi Srichandan — Academic Portfolio</title>
+<meta name="description" content="Academic portfolio of Kondamudi Srichandan — research in electromagnetic launchers, solar PV systems, and reverse osmosis desalination." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================== BACKGROUND FIELD-LINE CANVAS ===================== -->
+<canvas id="fieldCanvas"></canvas>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar" id="mainNav">
+  <div class="nav-inner">
+    <a href="#home" class="brand"><span class="brand-mark">KS</span><span class="brand-text js-name">Kondamudi Srichandan</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#research" class="nav-link">Research</a></li>
+      <li><a href="#publications" class="nav-link">Publications</a></li>
+      <li><a href="#conferences" class="nav-link">Conferences</a></li>
+      <li><a href="#chapters" class="nav-link">Book Chapters</a></li>
+      <li><a href="#patents" class="nav-link">Patents</a></li>
+      <li><a href="#guidance" class="nav-link">Guidance</a></li>
+      <li><a href="#awards" class="nav-link">Awards</a></li>
+      <li><a href="#workshops" class="nav-link">Workshops</a></li>
+      <li><a href="#fdps" class="nav-link">FDPs</a></li>
+      <li><a href="#teaching" class="nav-link">Teaching</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fa-solid fa-sun"></i></button>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<header id="home" class="hero">
+  <div class="hero-inner">
+    <div class="hero-text" data-aos="fade-right">
+      <span class="eyebrow">Academic Portfolio</span>
+      <h1 class="js-name">Kondamudi Srichandan</h1>
+      <p class="hero-designation js-designation">Faculty, Department of Electrical & Electronics Engineering</p>
+      <p class="hero-institution js-institution">GITAM (Deemed to be University), Visakhapatnam</p>
+      <p class="typing-line">Research focus: <span id="typingText"></span><span class="cursor">|</span></p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Contact</a>
+        <a href="#" class="btn btn-outline" id="downloadCvBtn"><i class="fa-solid fa-download"></i> Download CV</a>
+      </div>
+      <div class="id-bar" id="idBar"></div>
+    </div>
+    <div class="hero-visual" data-aos="fade-left">
+      <div class="photo-frame">
+        <div class="photo-placeholder"><i class="fa-solid fa-user-tie"></i></div>
+      </div>
+      <div class="coil-badge">
+        <span class="coil-num">291</span>
+        <span class="coil-label">Citations</span>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue"><i class="fa-solid fa-chevron-down"></i></div>
+</header>
+
+<main>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about" class="section">
+  <div class="section-inner">
+    <span class="eyebrow">01 — Profile</span>
+    <h2>About</h2>
+    <div class="about-grid">
+      <div class="about-text" data-aos="fade-up">
+        <p>Kondamudi Srichandan works across electromagnetic launcher systems, solar photovoltaic engineering, and solar-powered reverse osmosis desalination, with a publication record spanning IEEE, Springer, Elsevier, and AIP venues. His research combines electromagnetic device design (multipole, quadrupole, and coil-based launchers) with sustainable-energy system evaluation for coastal and water-stressed regions of India.</p>
+        <p>He has supervised Ph.D. and postgraduate research to completion, holds seven published patents across solar, IoT-robotics, and electromagnetic-launch domains, and has organized and attended workshops and faculty development programmes spanning power systems, control engineering, and emerging EV technologies.</p>
+        <div class="about-chip-row js-interests" id="interestChips"></div>
+      </div>
+      <div class="about-card" data-aos="fade-up" data-aos-delay="100">
+        <h3><i class="fa-solid fa-chart-simple"></i> Citation Trend</h3>
+        <div class="citation-metrics">
+          <div><span id="citAll">291</span><label>Citations (All)</label></div>
+          <div><span id="citRecent">240</span><label>Since 2021</label></div>
+          <div><span id="hIndex">8</span><label>h-index</label></div>
+          <div><span id="i10">6</span><label>i10-index</label></div>
+        </div>
+        <div class="mini-chart" id="citationChart"></div>
+        <p class="chart-note">Approximate year-wise trend, derived from citation records.</p>
+      </div>
+    </div>
+    <div class="id-detail-card" data-aos="fade-up">
+      <h3><i class="fa-solid fa-fingerprint"></i> Research Identifiers</h3>
+      <div class="id-detail-grid" id="idDetailGrid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== STATISTICS DASHBOARD ===================== -->
+<section id="research" class="section section-dark">
+  <div class="section-inner">
+    <span class="eyebrow">02 — By the Numbers</span>
+    <h2>Research Snapshot</h2>
+    <div class="stats-grid" id="statsGrid"></div>
+  </div>
+</section>
+
+<!-- ===================== PUBLICATIONS ===================== -->
+<section id="publications" class="section">
+  <div class="section-inner">
+    <span class="eyebrow">03 — Publications</span>
+    <h2>Research Publications</h2>
+
+    <div class="pub-toolbar">
+      <div class="pub-tabs" id="pubTabs"></div>
+      <div class="pub-filters">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="pubSearch" placeholder="Search title, author, journal…" />
+        </div>
+        <select id="pubYearFilter" class="select-input"></select>
+        <button class="pub-btn" id="pubSortBtn"><i class="fa-solid fa-arrow-down-wide-short"></i> Year</button>
+      </div>
+    </div>
+    <p class="pub-count" id="pubCount"></p>
+    <div class="pub-grid" id="pubList"></div>
+  </div>
+</section>
+
+<!-- ===================== CONFERENCES ===================== -->
+<section id="conferences" class="section section-dark">
+  <div class="section-inner">
+    <span class="eyebrow">04 — Conferences</span>
+    <h2>Conferences</h2>
+    <div class="conf-toolbar">
+      <div class="conf-tabs">
+        <button class="conf-tab active" data-type="international">International (18)</button>
+        <button class="conf-tab" data-type="national">National (16)</button>
+      </div>
+      <button class="pub-btn" id="confSortBtn"><i class="fa-solid fa-arrow-down-wide-short"></i> Year</button>
+    </div>
+    <div class="conf-grid" id="confList"></div>
+    <div id="confOrganizedSection" class="conf-organized">
+      <h3><i class="fa-solid fa-users-gear"></i> National Conferences Organized</h3>
+      <div class="timeline" id="confOrganizedList"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BOOK CHAPTERS ===================== -->
+<section id="chapters" class="section">
+  <div class="section-inner">
+    <span class="eyebrow">05 — Book Chapters</span>
+    <h2>International Book Chapters</h2>
+    <div class="chapter-grid" id="chapterGrid"></div>
+  </div>
+</section>
+
+<!-- ===================== PATENTS ===================== -->
+<section id="patents" class="section section-dark">
+  <div class="section-inner">
+    <span class="eyebrow">06 — Patents</span>
+    <h2>Patents</h2>
+    <div class="patent-grid" id="patentGrid"></div>
+  </div>
+</section>
+
+<!-- ===================== PROJECTS / GUIDANCE ===================== -->
+<section id="guidance" class="section">
+  <div class="section-inner">
+    <span class="eyebrow">07 — Research Guidance</span>
+    <h2>Research Guidance</h2>
+    <h3 class="sub-heading"><i class="fa-solid fa-user-graduate"></i> Ph.D. Scholars Guided</h3>
+    <div class="chapter-grid" id="phdGrid"></div>
+    <h3 class="sub-heading"><i class="fa-solid fa-user-pen"></i> PG Dissertations Guided</h3>
+    <div class="chapter-grid" id="pgGrid"></div>
+  </div>
+</section>
+
+<!-- ===================== AWARDS ===================== -->
+<section id="awards" class="section section-dark">
+  <div class="section-inner">
+    <span class="eyebrow">08 — Recognition</span>
+    <h2>Awards &amp; Recognition</h2>
+    <div class="awards-grid" id="awardsGrid"></div>
+  </div>
+</section>
+
+<!-- ===================== WORKSHOPS ===================== -->
+<section id="workshops" class="section">
+  <div class="section-inner">
+    <span class="eyebrow">09 — Workshops</span>
+    <h2>Workshops</h2>
+    <div class="two-col-timeline">
+      <div>
+        <h3 class="sub-heading"><i class="fa-solid fa-chalkboard"></i> Organized</h3>
+        <div class="timeline" id="workshopOrganizedList"></div>
+      </div>
+      <div>
+        <h3 class="sub-heading"><i class="fa-solid fa-person-chalkboard"></i> Attended</h3>
+        <div class="timeline" id="workshopAttendedList"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FDPs ===================== -->
+<section id="fdps" class="section section-dark">
+  <div class="section-inner">
+    <span class="eyebrow">10 — Faculty Development</span>
+    <h2>Faculty Development Programmes</h2>
+    <p class="empty-note" id="fdpOrganizedNote"></p>
+    <div class="chapter-grid" id="fdpAttendedGrid"></div>
+  </div>
+</section>
+
+<!-- ===================== TRAINING / CERTIFICATIONS ===================== -->
+<section id="training" class="section">
+  <div class="section-inner">
+    <span class="eyebrow">11 — Training</span>
+    <h2>Training &amp; Certifications</h2>
+    <div class="cert-list" id="trainingList"></div>
+    <h3 class="sub-heading"><i class="fa-solid fa-laptop-code"></i> Online Courses Completed</h3>
+    <div class="course-grid" id="courseGrid"></div>
+  </div>
+</section>
+
+<!-- ===================== TEACHING ===================== -->
+<section id="teaching" class="section section-dark">
+  <div class="section-inner">
+    <span class="eyebrow">12 — Teaching</span>
+    <h2>Teaching</h2>
+    <h3 class="sub-heading"><i class="fa-solid fa-book"></i> Subjects &amp; Areas of Expertise</h3>
+    <div class="chip-row" id="subjectsList"></div>
+    <h3 class="sub-heading"><i class="fa-solid fa-bolt"></i> B.Tech Projects Guided</h3>
+    <div class="btech-grid" id="btechGrid"></div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" class="section">
+  <div class="section-inner">
+    <span class="eyebrow">13 — Get in Touch</span>
+    <h2>Contact</h2>
+    <div class="contact-grid">
+      <div class="contact-info" data-aos="fade-right">
+        <div class="contact-row"><i class="fa-solid fa-envelope"></i><a class="js-email" href="#"></a></div>
+        <div class="contact-row"><i class="fa-solid fa-phone"></i><a class="js-phone" href="#"></a></div>
+        <div class="contact-row"><i class="fa-solid fa-location-dot"></i><span class="js-office"></span></div>
+        <div class="map-placeholder"><i class="fa-solid fa-map-location-dot"></i><span>Map placeholder — embed a Google Map iframe here</span></div>
+      </div>
+      <form class="contact-form" id="contactForm" data-aos="fade-left">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <input type="text" placeholder="Subject" />
+        <textarea rows="5" placeholder="Message" required></textarea>
+        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+        <p class="form-status" id="formStatus"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4 class="js-name">Kondamudi Srichandan</h4>
+      <p class="js-institution muted"></p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="#about">About</a>
+      <a href="#publications">Publications</a>
+      <a href="#conferences">Conferences</a>
+      <a href="#guidance">Guidance</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Research Profiles</h4>
+      <div class="footer-social" id="footerIdBar"></div>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <div class="footer-social">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#" aria-label="ResearchGate"><i class="fa-brands fa-researchgate"></i></a>
+        <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+  <p class="footer-bottom">© <span id="yearNow"></span> Kondamudi Srichandan. All rights reserved.</p>
+</footer>
+
+<button id="scrollTopBtn" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="script.js"></script>
+<script>
+  // Mirror ID bar into footer once profile renders
+  document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+      const src = document.getElementById("idBar");
+      const dst = document.getElementById("footerIdBar");
+      if (src && dst) dst.innerHTML = src.innerHTML;
+    }, 50);
+  });
+</script>
+</body>
+</html>
