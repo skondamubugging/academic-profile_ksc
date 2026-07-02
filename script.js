@@ -238,6 +238,11 @@ const TRAINING = [
 ];
 
 const ONLINE_COURSES = [
+  { title:"Al Fluency Framework & Foundations", org:"Anthropic", date:"Jun 2026" },
+  { title:"Introduction to AI", org:"University of Helsinki", date:"Jun 2026" },
+  { title:"Teaching the AI Fluency Framework", org:"Anthropic", date:"Mar 2026" },
+  { title:"Everyday Excel, Part 2", org:"University of Colorado Boulder ", date:"Jan 2022" },
+  { title:"Everyday Excel, Part 1", org:"University of Colorado Boulder ", date:"Jan 2022" },
   { title:"Design Thinking for Innovation", org:"University of Virginia", date:"Apr 2021" },
   { title:"Introduction to Cybersecurity Tools & Cyber Attacks", org:"IBM", date:"Dec 2020" },
   { title:"Electric Utilities Fundamentals and Future", org:"University of Colorado System", date:"Sep 2020" },
@@ -257,6 +262,7 @@ const ONLINE_COURSES = [
 ];
 
 const BTECH_PROJECTS = [
+  "Design and Simulation of Transversal flux Motor For Low Cost Electric Vehicle",
   "Design and Modeling of Axial Flux PM generator with Sinusoidal Control",
   "Design of a Smart Helmet",
   "Cost Benefit Analysis for the integration of P.V. generation",
@@ -286,7 +292,7 @@ const SUBJECTS = [
   "Power Systems Operation and Control", "Control System Engineering", "Power Systems Protection",
   "Electrical Machines", "Digital Logic Design", "Problem Solving and Programming with Python",
   "Problem Solving and Programming with C", "Fundamentals of Operating Systems",
-  "Introduction to Electrical Vehicle Technology"
+  "Introduction to Electrical Vehicle Technology", "Raspberry PI for Begineers"
 ];
 
 /* ========================================================================
